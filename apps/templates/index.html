@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <form class="form-group" action="{{ url_for("page.save") }}" method="POST">
+        <input class="form-control" type="text" name="name" value="{{ saves.get('name', '') }}" placeholder="Name" autofocus required="">
+        <br>
+        <input class="form-control btn btn-primary" type="submit" name="" value="Save">
+    </form>
+{% endblock %}
